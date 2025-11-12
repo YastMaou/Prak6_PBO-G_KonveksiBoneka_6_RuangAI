@@ -1,26 +1,40 @@
-
+// ANGGOTA 2: Static Nested Class Produksi
 public class KonveksiBoneka {
-    private String namaKonveksi;
-    private String lokasi;
-    private String jenisBoneka;
+    // ... (kode dari Anggota 1 tetap dipertahankan)
     
-    // Constructor
-    public KonveksiBoneka(String namaKonveksi, String lokasi, String jenisBoneka) {
-        this.namaKonveksi = namaKonveksi;
-        this.lokasi = lokasi;
-        this.jenisBoneka = jenisBoneka;
-    }
-    
-    // Method tampilkan info konveksi
-    public void tampilkanInfoKonveksi() {
-        System.out.println("=== INFO KONVEKSI ===");
-        System.out.println("Nama Konveksi: " + namaKonveksi);
-        System.out.println("Lokasi: " + lokasi);
-        System.out.println("Jenis Boneka: " + jenisBoneka);
-        System.out.println("--------------------");
-    }
-    
-    // STRUCTURE UNTUK STATIC NESTED CLASS (Anggota 2 akan lengkapi)
+    // STATIC NESTED CLASS PRODUKSI
     public static class Produksi {
+        // Atribut produksi
+        private String namaDesainer;
+        private int jumlahBoneka;
+        private int estimasiHari;
+        private double biayaProduksi;
+        
+        // Constructor
+        public Produksi(String namaDesainer, int jumlahBoneka, int estimasiHari, double biayaProduksi) {
+            this.namaDesainer = namaDesainer;
+            this.jumlahBoneka = jumlahBoneka;
+            this.estimasiHari = estimasiHari;
+            this.biayaProduksi = biayaProduksi;
+        }
+        
+        // Method tampilkan info produksi
+        public void tampilkanProduksi() {
+            System.out.println("=== INFO PRODUKSI ===");
+            System.out.println("Nama Desainer: " + namaDesainer);
+            System.out.println("Jumlah Boneka: " + jumlahBoneka + " pcs");
+            System.out.println("Estimasi Hari: " + estimasiHari + " hari");
+            System.out.println("Biaya Produksi per Boneka: Rp " + biayaProduksi);
+            System.out.println("--------------------");
+        }
+        
+        // Getter untuk perhitungan (Anggota 3 akan pakai)
+        public int getJumlahBoneka() {
+            return jumlahBoneka;
+        }
+        
+        public double getBiayaProduksi() {
+            return biayaProduksi;
+        }
     }
 }
